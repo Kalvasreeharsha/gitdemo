@@ -1,5 +1,7 @@
 # add_sub_mul_div.py
 
+import sys
+
 def add(a, b):
     return a + b
 
@@ -14,11 +16,11 @@ def div(a, b):
         return "Division by zero error"
     return a / b
 
-if __name__ == "__main__":
-    a = float(input("Enter first number: "))
-    b = float(input("Enter second number: "))
+a = float(sys.argv[1])
+b = float(sys.argv[2])
 
-    print(f"Addition: {add(a, b)}")
-    print(f"Subtraction: {sub(a, b)}")
-    print(f"Multiplication: {mul(a, b)}")
-    print(f"Division: {div(a, b)}")
+
+print(f"Addition: {add(a, b)}")
+print(f"Subtraction: {sub(a, b)}")
+print(f"Multiplication: {mul(a, b)}")
+print(f"Division: {div(a, b)}")
